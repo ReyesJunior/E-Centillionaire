@@ -12,7 +12,7 @@ app.config( [ '$routeProvider', function( $routeProvider ) {
 
   // Home
     .when( '/home', {
-      templateUrl: 'js/views/homepage.html',
+      templateUrl: 'app/components/home/homepage.html',
       controller: 'MenuController' } )
 
   // Category Page
