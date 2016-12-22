@@ -38,7 +38,7 @@
   app.directive( 'siteHeader' , function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/shared/siteheader.html'
+      templateUrl: 'app/shared/views/siteheader.html'
     };
   });
 
@@ -46,7 +46,7 @@
   app.directive( 'shopDropdownMenu' , function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/shared/shopDropdownMenu.html',
+      templateUrl: 'app/shared/views/shopDropdownMenu.html',
       link: function( scope, element, attrs ) {
 
         var $shopHeader = angular.element(document.getElementById('shop-dropdown-menu-header'));
