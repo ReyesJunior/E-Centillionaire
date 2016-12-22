@@ -1,0 +1,93 @@
+
+<!-- Product Details -->
+
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- Wrapper -->
+			<div class="description-panel-wrapper">
+
+			<!-- Product Detail Panel -->
+			<div class="panel panel-default">
+				<div class="description-panel-heading panel-heading">
+					<h3 class="panel-title"> {{productName}} </h3>
+				</div>
+				<div class="panel-body">
+
+					<!-- Product Details -->
+					<h4 class="product-cost"> {{ productCost | currency }} USD</h4>
+					<div class="product-stock-details">
+
+						<!-- In stock -->
+						<div class="stock-check instock" ng-show="inStock()">
+							<span class="glyphicon glyphicon-ok-circle glyphicon-stock glyph-instock"></span>
+							<p>In Stock</p>
+						</div>
+
+						<!-- Out of Stock -->
+						<div class="stock-check nostock" ng-show="!inStock()">
+							<span class="glyphicon glyphicon-remove-circle glyphicon-stock glyph-nostock"></span>
+							<p>Out of Stock</p>
+						</div>
+					</div>
+
+					<p class="product-description"> {{ productDescription }}</p>
+
+					<!-- Product Features -->
+					<div class="products-feature-panel">
+						<!-- ng-repeat -->
+						<div class="product-feature">
+							<h4>Feature 1:</h4>
+							<p>Feature 1 Detail</p>
+						</div>
+						<div class="product-feature">
+							<h4>Feature 1:</h4>
+							<p>Feature 1 Detail</p>
+						</div>
+						<div class="product-feature">
+							<h4>Feature 1:</h4>
+							<p>Feature 1 Detail</p>
+						</div>
+					</div>
+
+					<!-- Add to Cart -->
+					<button ng-controller="CartController" ng-click="addToCart()" ng-disabled="!inStock()" type="button" class="btn btn-primary btn-lg add-to-cart-button">Add to cart</button> <!-- ng-click="addToCart() -->
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

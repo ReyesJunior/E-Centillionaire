@@ -1,0 +1,24 @@
+<!-- Shop Categories Dropdown -->
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="shop-dropdown-panel panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<a id="shop-dropdown-menu" class="collapsed" role="button" data-toggle="collapse" target="_this" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+					<div id="shop-dropdown-menu-header" class="panel-heading" role="tab" id="headingOne">	
+						<h4 class="panel-title">Shop</h4>
+						<span class="glyphicon-dropdown-menu glyphicon glyphicon-menu-down"></span>				
+					</div>
+				</a>
+				<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					<div class="panel-body" ng-controller="MenuController">
+						<ul class="shop-dropdown-menu-list">
+							<li>Browse Shop Categories</li>
+							<a ng-repeat="category in shopCategories.categories" ng-href="#/shop/{{ category.category_route }}"/>{{ category.name }}</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
