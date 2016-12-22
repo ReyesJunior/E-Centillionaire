@@ -1,0 +1,36 @@
+[
+	{
+		"name": "Zodiac",
+		"image": "http://i0.wp.com/www.greenprophet.com/wp-content/uploads/2011/11/Floating-Islands-the-World-Dubai-1.jpg?fit=800%2C9999",
+		"redirectTo": "/real-estates/islands/zodiac/",
+		"category": "islands",
+	},
+	{
+		"name": "Jellyfish",
+		"image": "http://www.2luxury2.com/wp-content/uploads/Aequorea-an-oceanscraper-printed-in-3D-from-the-seventh-continents-garbage.jpg",
+		"redirectTo": "/real-estates/islands/jellyfish/",
+		"category": "islands"
+	}, 
+	{
+		"name": "Oceanscraper",
+		"image": "https://8583b52b4a309671f69d-b436b898353c7dc300b5887446a26466.ssl.cf1.rackcdn.com/7292729_futuristic-oceanscapers-are-floating-villages_t67a0f764.jpg",
+		"redirectTo": "/real-estates/islands/oceanscraper/",
+		"category": "islands"
+	},
+	{
+		"name": "Car",
+		"image": "http://www.tripstodiscover.com/wp-content/uploads/2014/07/Aitutaki-Cook-Islands.jpg",
+		"redirectTo": "/real-estates/islands/",
+		"category": "car"
+	}, 
+	{
+		"name": "Mansions",
+		"image": "http://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/06/4000032112-mallorca.jpg",
+		"category": "mansions"
+	}, 
+	{
+		"name": "Miscellaneous",
+		"image": "http://4.bp.blogspot.com/-MU7pFQcj2UU/Un6YuyMrvSI/AAAAAAAABR4/NBjwUUaBxZ4/s1600/Monolithic-Dome-Homes-with-Great-Lighting.jpg",
+		"category": "miscellaneous"
+	}
+]
