@@ -4,7 +4,7 @@
   app.directive( 'siteNav' , function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/shared/site-nav.html',
+      templateUrl: 'app/js/directives/shared/site-nav.html',
       link: function( scope, element, attrs ) {
 
         var $menuLeft = angular.element(document.getElementsByClassName('pushmenu-left'));
