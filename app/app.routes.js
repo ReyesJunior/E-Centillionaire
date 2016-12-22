@@ -17,28 +17,28 @@ app.config( [ '$routeProvider', function( $routeProvider ) {
 
   // Category Page
     .when( '/shop/:category_route', {
-      templateUrl: 'js/views/categorypage.html',
+      templateUrl: 'app/components/categories/categorypage.html',
       controller: 'CategoryController' } )
 
   // Subcategory Page
     .when( '/shop/:category_route/:subcategory_route', {
-      templateUrl: 'js/views/subcategorypage.html',
+      templateUrl: 'app/components/subcategories/subcategorypage.html',
       controller: 'SubcategoryController' } )
 
   // Product Page
     .when( '/shop/:category_route/:subcategory_route/:product_route', {
-      templateUrl: 'js/views/productPage.html',
+      templateUrl: 'app/components/products/productPage.html',
       controller: 'ProductController' } )
 
   // Edit Shopping Cart
     .when( '/cart', {
-      templateUrl: 'js/views/shoppingcart.html',
-      controller: 'MenuController' } )
+      templateUrl: 'app/components/cart/shoppingcart.html',
+      controller: 'CartController' } )
 
   // Checkout 
     .when( '/checkout', {
-      templateUrl: 'js/views/payment-interface.html',
-      controller: 'MenuController' } )
+      templateUrl: 'app/components/checkout/payment-interface.html',
+      controller: 'CheckoutController' } )
 
   //Default (Back to Home) When this is on, it seems to set-up an infinite routeloop
     .otherwise( {
