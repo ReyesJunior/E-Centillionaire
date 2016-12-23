@@ -11,10 +11,10 @@
 					</div>
 				</a>
 				<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-					<div class="panel-body" ng-controller="MenuController">
+					<div class="panel-body">
 						<ul class="shop-dropdown-menu-list">
 							<li>Browse Shop Categories</li>
-							<a ng-repeat="category in shopCategories.categories" ng-href="#/shop/{{ category.category_route }}"/>{{ category.name }}</a>
+							<a ng-repeat="category in shopCategories.categories" ng-href="#/shop/{{ category.category_route }}">{{ category.name }}</a>
 						</ul>
 					</div>
 				</div>
