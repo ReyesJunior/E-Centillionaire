@@ -13,6 +13,13 @@
     };
   });
 
+    app.directive( 'productListingPanel', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'js/directives/subcategories/product-listing-panel.html'
+    };
+  });
+
   app.directive( 'productDetails', function() {
     return {
       restrict: 'E',
