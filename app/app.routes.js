@@ -33,7 +33,7 @@ app.config( [ '$routeProvider', function( $routeProvider ) {
   // Edit Shopping Cart
     .when( '/cart', {
       templateUrl: 'app/components/cart/shoppingcart.html',
-      controller: 'CartController' } )
+      controller: 'MenuController' } )
 
   // Checkout 
     .when( '/checkout', {
