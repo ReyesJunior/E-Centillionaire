@@ -1,46 +1,47 @@
 
 /* /////---------------------
 
-  Route Provider + RouteParams
+    Route Provider + RouteParams
 
 /////---------------------- */
 
 // Route Provider
 app.config( [ '$routeProvider', function( $routeProvider ) {
 
-  $routeProvider
+    $routeProvider
 
-  // Home
+    // Home Page
     .when( '/home', {
-      templateUrl: 'app/components/home/homepage.html',
-      controller: 'MenuController' } )
+        templateUrl: 'app/components/home/homepage.html',
+        controller: 'MenuController' } )
 
-  // Category Page
+    // Category Page
     .when( '/shop/:category_route', {
-      templateUrl: 'app/components/categories/categorypage.html',
-      controller: 'CategoryController' } )
+        templateUrl: 'app/components/categories/categorypage.html',
+        controller: 'CategoryController' } )
 
-  // Subcategory Page
+    // Subcategory Page
     .when( '/shop/:category_route/:subcategory_route', {
-      templateUrl: 'app/components/subcategories/subcategorypage.html',
-      controller: 'SubcategoryController' } )
+        templateUrl: 'app/components/subcategories/subcategorypage.html',
+        controller: 'SubcategoryController' } )
 
-  // Product Page
+    // Product Page
     .when( '/shop/:category_route/:subcategory_route/:product_route', {
-      templateUrl: 'app/components/products/productPage.html',
-      controller: 'ProductController' } )
+        templateUrl: 'app/components/products/productPage.html',
+        controller: 'ProductController' } )
 
-  // Edit Shopping Cart
+    // Edit ShoppingCart Page
     .when( '/cart', {
-      templateUrl: 'app/components/cart/shoppingcart.html',
-      controller: 'MenuController' } )
+        templateUrl: 'app/components/cart/shoppingcart.html',
+        controller: 'MenuController' } )
 
-  // Checkout 
+    // Checkout Page
     .when( '/checkout', {
-      templateUrl: 'app/components/checkout/payment-interface.html',
-      controller: 'CheckoutController' } )
+        templateUrl: 'app/components/checkout/payment-interface.html',
+        controller: 'CheckoutController' } )
 
-  //Default (Back to Home) When this is on, it seems to set-up an infinite routeloop
+    // Default (Back to Home)
     .otherwise( {
-      redirectTo: '/home' });
-  }]);
+        redirectTo: '/home' } );
+
+}]);
