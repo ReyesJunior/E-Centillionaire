@@ -2,28 +2,28 @@
   app.directive( 'productBreadcrumb', function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/products/products-breadcrumb.html'
+      templateUrl: 'app/components/products/products-breadcrumb.html'
     };
   });
 
   app.directive( 'productSlider', function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/products/product-slider.html'
+      templateUrl: 'app/components/products/product-slider.html'
     };
   });
 
     app.directive( 'productListingPanel', function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/subcategories/product-listing-panel.html'
+      templateUrl: 'app/components/products/product-listing-panel.html'
     };
   });
 
   app.directive( 'productDetails', function() {
     return {
       restrict: 'E',
-      templateUrl: 'js/directives/products/product-details.html'
+      templateUrl: 'app/components/products/product-details.html'
     };
   });
 
