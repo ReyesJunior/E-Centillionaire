@@ -150,49 +150,10 @@ app.controller( 'MenuController', [ '$scope', 'ProductService', 'CategoryService
 
 		// Product that will be removed
 		var selectedProductId = id;
-		console.log( id );
 
 		CartService.removeProduct( selectedProductId );
 
 		$scope.shoppingCart.product = cartToProducts();
-
-		// // retrieve cart
-		// var cartWithProductIds = CartService.getCart();
-		// var selectedProduct = ProductService.getProductById( selectedProductId ).id;
-		// console.log( "selected productId to delete is : " + selectedProduct);
-		// // Array that will hold products (as objects)
-		// var productObjectsArray = [];
-
-		// // iterate through cart and retrieve products into a new Object Array 
-		// for( var i = 0; i < cartWithProductIds.length; i++ ) {
-
-		// 	var productId = cartWithProductIds[i];
-		// 	var returnedProduct = ProductService.getProductById( productId );
-			
-		// 	if(!returnedProduct) {
-		// 		console.log( "Could not retrieve products at this time");
-		// 	} else {
-		// 		productObjectsArray.push( returnedProduct.id );
-		// 	}
-		// }
-
-		// // iterate through new Object Array
-		// for( var i = 0; i < productObjectsArray.length; i++ ) {
-
-		// 	console.log(productObjectsArray);
-
-		// 	if ( productObjectsArray[i] === selectedProduct ) {
-		// 		productObjectsArray.splice( i, 1 );
-		// 	}
-
-
-
-		// // // $scope.shoppingCart.product.splice( index, 1 );
-		// }
-
-		// console.log( productObjectsArray);
-		// return productObjectsArray;
-
 	};
 
 	$scope.emptyCart = function() {
@@ -202,12 +163,13 @@ app.controller( 'MenuController', [ '$scope', 'ProductService', 'CategoryService
 		// cart.splice();
 		localStorage.clear();
 		cart = [];
-		//refresh window too
 		localStorage.setItem("cart", JSON.stringify( cart ) );
 		localStorage.setItem("lastSave", new Date().getTime() + ( 3 * 24 * 60 * 60 * 1000 ) );
 
 		$scope.shoppingCart.product = cartToProducts();
-		console.log(cart);
+		//refresh window too
+		window.location.reload();
+
 	}
 
 
