@@ -6,7 +6,7 @@
 		<h2 class="listing-header">Shop Subcategories</h2>
 		<div class="listing-wrapper row">
 			<div ng-repeat="subcategory in subcategoryList" class="listing col-xs-12 col-sm-6 col-md-4">
-				<a ng-href="#/shop/{{ subcategory.subcategory_route }}"/>
+				<a ng-href="#/shop/{{ subcategory.subcategory_route }}">
 					<div class="image-container">
 						<img ng-src=" {{ subcategory.subcategoryImage }}" class="img-responsive" alt="...">
 						<div class="image-overlay">
