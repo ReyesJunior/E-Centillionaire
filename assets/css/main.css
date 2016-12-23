@@ -347,20 +347,18 @@ Breadcrumbs
 /////---------------------- */
 
 .breadcrumb {
-padding: 15px;
-background-color: white;
-color: #2d2d2d;
-margin-bottom: 0;
-border-radius: 0;
+    padding: 15px;
+    background-color: white;
+    color: #2d2d2d;
+    margin-bottom: 0;
+    border-radius: 0;
 }
-
 .breadcrumb a {
-color: #2d2d2d;
+    color: #2d2d2d;
 }
-
 .breadcrumb > .active a {
-padding-bottom: 2px;
-border-bottom: 4px solid #16c529;
+    padding-bottom: 2px;
+    border-bottom: 4px solid #5cb85c;
 }
 
 /* /////---------------------
@@ -370,77 +368,68 @@ Carousel
 /////---------------------- */
 
 .carousel-wrapper {
-padding-top: 20px;
-margin: 0 auto;
-background: white;
+    padding-top: 15px;
+    margin: 0 auto;
+    background: white;
 }
-
 .carousel-image {
-padding: 0 15px;
+    padding: 0 5px;
 }
 
 /* Caption */
-
 .carousel-caption {
-top: 15%;
+    display: none;
+    top: 15%;
 }
 
 /* Controls */
-
 .carousel-control.right, .carousel-control.left {
-background: none;
+    background: none;
 }
-
 .modified-carousel-control {
-background-image: none !important;
+    background-image: none !important;
 }
 
 /* Indicators */
-
 .carousel-indicators li, .carousel-indicators .active {
-height: 100%;
-width: 60px;
-text-indent: 0;
-border-radius: 0;
-border-color: #cccccc;
-background-color: white
+    height: 100%;
+    width: 60px;
+    text-indent: 0;
+    border-radius: 0;
+    border-color: #efefef;
+    background-color: white
 }
-
 .carousel-indicators .active {
-border-color: #16c529;
-background-color: #16c529;
+    border-color: #5cb85c;
+    background-color: #5cb85c;
 }
 
 /* thumbnails */
-
 .modified-thumbnail-slider {
-position: static;
-width: 100%;
-margin: 0 auto;
-padding: 10px 0;
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
 }
-
 .carousel-thumbnails {
-position: relative;
-width: 50px;
+    position: relative;
+    width: 50px;
 }
-
 .thumbnail-overlay {
-background-color: rgba( 225, 225, 225, 0.75);
-top: 0;
-left: 0;
-position: absolute;
-height: 100%;
-width: 100%;
+    background-color: rgba( 225, 225, 225, 0.75);
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
-
 .carousel-indicators .active > .thumbnail-overlay {
-background-color: rgba( 0, 0, 0, 0);
-top: 0;
-left: 0;
-position: absolute;
-height: 100%;
-width: 100%;
+    background-color: rgba( 0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 /* /////---------------------
@@ -498,7 +487,7 @@ text-align: center;
 color: #FFF;
 }
 
-.listing-text:before, .listing-text:after {
+.listing-text::before, .listing-text::after {
 position: absolute;
 width: 100%;
 left: 0;
@@ -511,11 +500,11 @@ z-index: 1;
 pointer-events: none;
 }
 
-.listing-text:before {
+.listing-text::before {
 transform: translateY(-20px);
 }
 
-.listing-text:after {
+.listing-text::after {
 transform: translateY(20px);
 }
 
