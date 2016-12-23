@@ -2,14 +2,16 @@
 /* 	///////////////////////////////////////////////////// -- Global CSS -- ///////////////////////////////////////////////////// */
 
 body {
-    font-family: helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
     background-color: white;
     margin: 0;
     padding: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Droid Sans', sans-serif;
+}
 
-a, a:hover, a:focus {
+a, a:hover, a:focus, p {
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
 
