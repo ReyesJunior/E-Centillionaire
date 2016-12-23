@@ -1,71 +1,79 @@
 
-<!-- Site Navigation (MenuController) -->
+    <!-- Site Navigation (MenuController) -->
 
-<div class="row">
-  <div class="col-xs-12" ng-controller="MenuController">
-  <!-- Push-menu (both nav + cart) -->
-    <div class="pushmenu-push">
-    <!-- Nav -->
-      <nav class="pushmenu pushmenu-left">
-        <h3>Menu</h3>
-        <h4 class="close-pushmenu" ng-click="closeMenu()"><span class="glyphicon glyphicon-chevron-right"></span></h4>
-        <a ng-click="closeMenu()" href="#">Home</a>
-      <!-- Shop by Category -->
-        <h4 class="pushmenu-section">Shop By Category</h4>
-        <a ng-repeat="category in shopCategories.categories" ng-click="closeMenu()" ng-href="#/shop/{{ category.category_route }}"> {{ category.name }}</a>
-      <!-- Shop by Subcategory -->
-        <h4 class="pushmenu-section">Shop By Subcategory</h4>
-        <a ng-repeat="subcategory in shopSubcategories.subcategories" ng-click="closeMenu()" ng-href="#/shop/{{ subcategory.subcategory_route }}"> {{ subcategory.name }}</a>
-      </nav> 
-    <!-- Shopping Cart (CartController) --> 
-      <div class="pushmenu pushcart-right">
-        <h3>Cart</h3>
-        <h4 class="close-pushcart" ng-click="closeCart()"><span class="glyphicon glyphicon-chevron-left"></span></h4>
-        <ul class="right-push-cart-list">
-          <!-- cart-list-item -->
-          <li ng-repeat="item in shoppingCart.product track by $index" class="cart-item">
-            <!-- Cart item image panel -->
-            <div class="cart-image-panel">
-              <img ng-src="{{ item.productImage }}" alt="..." class="img-rounded cart-item-image">
-            </div>
-            <!-- Cart item description panel -->
-            <div class="cart-description-panel">
-              <p class="cart-item-title">{{item.name}}</p>
-              <p class="cart-item-price">{{ item.price | currency}}</p>
-              <p class="cart-item-quantity">Qty: {{ item.quantity }}</p>
-            </div>
-          </li>
-        </ul>
-        <!-- Cart Cost Total -->
-        <div class="right-push-cart-total"> Total: {{ grandTotal() | currency }} </div>
-        <!-- Cart Edit cart button -->
-        <a href="#/cart">
-          <div id="edit-cart" class="btn btn-default btn-lg" type="button" ng-click="closeCart()">Edit Cart</div>
-        </a>
-        <!-- Cart Checkout button -->
-        <a href="#/checkout">
-          <button id="cart-checkout" class="btn btn-success btn-lg" type="button">Checkout</button>
-        </a>
-      </div> 
-    <!-- Main Content Wrapper (MenuController)-->
-      <div class="main-content-wrapper">
-        <div class="main-content-wrapper-overlay">
-          <section class="site-menu">
-          <!-- Nav button -->
-            <button id="nav_list" class="btn" type="button">Menu</button>
-          <!-- Cart button -->
-            <button id="cart_list" class="btn cart-button" ng-click="openCart()" type="button">
-              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> <!-- ng-bind to cart; visibility:hidden (if no items in cart) -->
-              <span class="badge shopping-cart-badge">0</span> <!-- ng-bind (ng-model) 2-waybinding with # items in cart -->
-              <p>Cart</p>
-            </button>
-          </section>
-          <!-- Views -->
-          <section class="content">
-            <div class="viewholder" ng-view></div>
-          </section>
-        </div><!-- End of main-wrapper-overlay -->
-      </div><!-- End main-content-wrapper --> 
-    </div><!-- End push-menu -->
-  </div>
-</div>
+    <div class="row">
+        <div class="col-xs-12" ng-controller="MenuController">
+            <!-- Push-menu (both nav + cart) -->
+            <div class="pushmenu-push">
+                <!-- Nav -->
+                <nav class="pushmenu pushmenu-left">
+                    <h3>Menu</h3>
+                    <h4 class="close-pushmenu" ng-click="closeMenu()">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </h4>
+                    <a ng-click="closeMenu()" href="#">Home</a>
+                    <!-- Shop by Category -->
+                    <h4 class="pushmenu-section">Shop By Category</h4>
+                    <a ng-repeat="category in shopCategories.categories" ng-click="closeMenu()" ng-href="#/shop/{{ category.category_route }}">{{ category.name }}</a>
+                    <!-- Shop by Subcategory -->
+                    <h4 class="pushmenu-section">Shop By Subcategory</h4>
+                    <a ng-repeat="subcategory in shopSubcategories.subcategories" ng-click="closeMenu()" ng-href="#/shop/{{ subcategory.subcategory_route }}">{{ subcategory.name }}</a>
+                </nav> 
+                <!-- Shopping Cart (CartController) --> 
+                <div class="pushmenu pushcart-right">
+                    <h3>Cart</h3>
+                    <h4 class="close-pushcart" ng-click="closeCart()">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </h4>
+                    <ul class="right-push-cart-list">
+                        <!-- cart-list-item -->
+                        <li ng-repeat="item in shoppingCart.product track by $index" class="cart-item">
+                            <!-- Cart item image panel -->
+                            <div class="cart-image-panel">
+                                <img ng-src="{{ item.productImage }}" alt="..." class="img-rounded cart-item-image">
+                            </div>
+                            <!-- Cart item description panel -->
+                            <div class="cart-description-panel">
+                                <p class="cart-item-title">{{item.name}}</p>
+                                <p class="cart-item-price">{{ item.price | currency}}</p>
+                                <p class="cart-item-quantity">Qty: {{ item.quantity }}</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Cart Cost Total -->
+                    <div class="right-push-cart-total">Total: {{ grandTotal() | currency }}</div>
+                    <!-- Cart Edit cart button -->
+                    <a href="#/cart">
+                        <div id="edit-cart" class="btn btn-default btn-lg" type="button" ng-click="closeCart()">Edit Cart</div>
+                    </a>
+                    <!-- Cart Checkout button -->
+                    <a href="#/checkout">
+                        <button id="cart-checkout" class="btn btn-success btn-lg" type="button">Checkout</button>
+                    </a>
+                </div> 
+            <!-- Main Content Wrapper (MenuController)-->
+            <div class="main-content-wrapper">
+                <div class="main-content-wrapper-overlay">
+                    <section class="site-menu">
+                        <!-- Nav button -->
+                        <button id="nav_list" class="btn" type="button">Menu</button>
+                        <!-- Cart button -->
+                        <button id="cart_list" class="btn cart-button" ng-click="openCart()" type="button">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> <!-- ng-bind to cart; visibility:hidden (if no items in cart) -->
+                            <span class="badge shopping-cart-badge">0</span> <!-- ng-bind (ng-model) 2-waybinding with # items in cart -->
+                            <p>Cart</p>
+                        </button>
+                    </section>
+
+                    <!-- Views -->
+                    <section class="content">
+                        <div class="viewholder" ng-view></div>
+                    </section>
+
+                </div><!-- End of main-wrapper-overlay -->
+            </div><!-- End main-content-wrapper --> 
+            </div><!-- End push-menu -->
+        </div>
+    </div>
+
+
