@@ -128,7 +128,6 @@ app.controller( 'CartController', [ '$scope', '$routeParams', 'CategoryService',
 
 		CartService.addProduct(productId); // ex. "0"
 
-
 		console.log( $scope.cart );
 		console.log( "There are " + numItems + " of items in the cart" );
 
@@ -136,31 +135,6 @@ app.controller( 'CartController', [ '$scope', '$routeParams', 'CategoryService',
 
 
 	}; // End of addToCart Function
-
-	// $scope.removeFromCart = function () {
-
-	// 	// Retrieve Product + Product info
-	// 	var selectedProductObject = selectedProduct;
-	// 	var productName = selectedProductObject.name;
-	// 	var productCost = selectedProductObject.price;
-	// 	var productId = selectedProduct.id;
-	// 	var numItems = $scope.cart.length + 1;
-
-
-	// 	// Check if Product is already in cart
-	// 	// if so, increment quantity
-	// 	// if not, add to Product to Cart
-
-	// 	CartService.removeProduct(productId); // ex. "0"
-
-
-	// 	console.log( $scope.cart );
-	// 	console.log( "There are " + numItems + " of items in the cart" );
-
-	// 	return $scope.cart;
-
-
-	// }; // End of addToCart Function
 
 }]);
 
