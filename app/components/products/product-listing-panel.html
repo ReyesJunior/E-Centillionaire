@@ -6,7 +6,7 @@
 		<h2 class="listing-header">Shop Products</h2>
 		<div class="listing-wrapper row">
 			<div ng-repeat="product in productList" class="listing col-xs-12 col-sm-6 col-md-4">
-				<a ng-href="#/shop/{{ product.productRoute }}"/>
+				<a ng-href="#/shop/{{ product.productRoute }}">
 					<div class="image-container">
 						<img ng-src=" {{ product.productImage }}" class="img-responsive" alt="...">
 						<div class="image-overlay">
