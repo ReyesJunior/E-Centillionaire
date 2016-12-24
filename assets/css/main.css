@@ -434,78 +434,67 @@ Carousel
 
 /* /////---------------------
 
-Shop Listings (Categories, Subcategories, and Products)
+    Shop Listings (Categories, Subcategories, and Products)
 
 /////---------------------- */
 
 .listing-header {
-margin: 0;
-padding: 35px;
-text-align: center;
-border-bottom: solid 1px #ddd;
-border-top: solid 1px #ddd;
-color: #2d2d2d;
-background-color: #f5f5f5;
+    margin: 0;
+    padding: 35px;
+    text-align: center;
+    color: white;
+    background-color: #5cb85c;
 }
-
 .listing-wrapper {
-background-color: #FFF;
-padding: 35px;
+    background-color: #FFF;
+    padding: 35px;
 }
-
 .listing {
-padding: 35px;
-background-color: white;
+    padding: 35px;
+    background-color: white;
 }
-
 .image-container {
-position: relative;
+    position: relative;
 }
-
 .image-overlay {
-position: absolute;
-height: 100%; 
-top: 0;
-left: 0;
-right: 0;
-background-color: rgba(0,0,0,0.15);
+    position: absolute;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.15);
 }
-
 .image-overlay:hover {
-background-color: rgba(0,0,0,0.45);
+    background-color: rgba(0,0,0,0.45);
 }
-
 .listing-text {
-position: relative;
-width: 70%;
-margin: 35% auto;
-font-size: 12px;
-text-transform: uppercase;
-letter-spacing: 1.3px;
-text-shadow: 1px 1px 0 rgba(0, 0, 0, .8);
-text-align: center;
-color: #FFF;
+    position: relative;
+    width: 70%;
+    margin: 35% auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .8);
+    text-align: center;
+    color: white;
 }
-
 .listing-text::before, .listing-text::after {
-position: absolute;
-width: 100%;
-left: 0;
-top: 50%;
-height: 2px;
-margin-top: -1px;
-background: rgba( 255,255,255, 0.9);
-content: '';
-z-index: 1;
-pointer-events: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    height: 2px;
+    margin-top: -1px;
+    background: rgba( 255,255,255, 0.9);
+    content: '';
+    z-index: 1;
+    pointer-events: none;
 }
-
 .listing-text::before {
-transform: translateY(-20px);
+    transform: translateY(-20px);
 }
-
 .listing-text::after {
-transform: translateY(20px);
+    transform: translateY(20px);
 }
 
 /* /////---------------------
@@ -515,18 +504,21 @@ Description-Panel
 /////---------------------- */
 
 .description-panel-wrapper {
-margin: 0 auto;
-padding: 35px;
-background-color: white;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: white;
 }
-
+.description-panel-wrapper .panel.panel-default {
+    border:  1px solid #efefef;
+    box-shadow: none;
+}
 .description-panel-heading {
-background-color: #16c529 !important;
-border-color: #16C529;
-color: white !important;
-text-align: center;
+    background-color: #5cb85c !important;
+    border-color: #5cb85c !important;
+    color: white !important;
+    text-align: center;
+    border-bottom: none;
 }
-
 .description-panel-body {}
 
 
