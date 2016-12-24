@@ -4,17 +4,20 @@
 <div class="row">
 	<div class="col-xs-12">
 		<h2 class="listing-header">Shop</h2>
-		<div class="listing-wrapper row">
-			<div ng-repeat="category in shopCategories.categories" class="listing col-xs-12 col-sm-6 col-md-4">
-				<a ng-href="#/shop/{{ category.category_route }}">
-					<div class="image-container">
-						<img ng-src="{{ category.categoryImage }}" class="img-responsive" alt="...">
-						<div class="image-overlay">
-							<p class="listing-text"> {{ category.name }} </p>
-						</div>
+	</div>
+</div>
+<div class="row">
+	<div class="listing-wrapper">
+		<div ng-repeat="category in shopCategories.categories" class="listing col-xs-12 col-sm-6 col-md-4">
+			<a ng-href="#/shop/{{ category.category_route }}">
+				<div class="image-container">
+					<div class="image-overlay">
+						<p class="listing-text"> {{ category.name }} </p>
 					</div>
-				</a>
-			</div>
+					<img ng-src="{{ category.categoryImage }}" class="img-responsive" alt="...">
+				</div>
+			</a>
 		</div>
 	</div>
 </div>
+
